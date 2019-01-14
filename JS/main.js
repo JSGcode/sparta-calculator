@@ -3,8 +3,8 @@ function basicCalculator(){
     var input1 = prompt("Insert your first value");
     var input2 = prompt("Insert your second value");
     var basicOperator = prompt("Insert the desired operation (+,-,*,/)");
-    var str2Int1 = Number(input1);
-    var str2Int2 = Number(input2);
+    var str2Int1 = parseInt(input1);   // Rather than parseInt Number can also be used to convert a string to an INT
+    var str2Int2 = parseInt(input2); 
         switch (basicOperator) {
             case "+":
                 result = str2Int1+str2Int2;
@@ -27,7 +27,7 @@ function basicCalculator(){
 
 // =============Advanced Calculator Function =============
 function advCalculator() {
-    var option = prompt("Which Operation would you like:\n 1 - BMI,\n 2 - Celsius to Farenheit,\n 3 - Farenheit to Celsius");
+    var option = prompt("Which calculation would you like to do:\n 1 - For BMI,\n 2 - To convert Celsius into Farenheit,\n 3 - To convert Farenheit into Celsius");
         switch (option) {
             case "1":
                 var weight = prompt("Please enter your weight(kg):");
