@@ -1,24 +1,22 @@
 // =============Basic Calculator Function =============
 function basicCalculator(){
-    var input1 = prompt("Insert your first value");
-    var input2 = prompt("Insert your second value");
-    var basicOperator = prompt("Insert the desired operation (+,-,*,/)");
-    var str2Int1 = parseInt(input1);   // Rather than parseInt Number can also be used to convert a string to an INT
-    var str2Int2 = parseInt(input2); 
+    var input1 = parseInt(prompt("Insert your first value"));
+    var input2 = parseInt(prompt("Insert your second value"));
+    var basicOperator = prompt("Insert the desired operation (+, -, *, /)");
         switch (basicOperator) {
             case "+":
-                result = str2Int1+str2Int2;
+                result = input1+input2;
                 break;  
             case "-":
-                result = str2Int1-str2Int2;
+                result = input1-input2;
                 break;
             case "/":
-                result = (str2Int1/str2Int2);
+                result = (input1/input2);
                 break;
             case "*":
-                result = str2Int1*str2Int2;
+                result = input1*input2;
                 break;
-            default:5
+            default:
                 alert("Invalid Operator");
                 break;
         }
@@ -30,27 +28,23 @@ function advCalculator() {
     var option = prompt("Which calculation would you like to do:\n 1 - For BMI,\n 2 - To convert Celsius into Farenheit,\n 3 - To convert Farenheit into Celsius");
         switch (option) {
             case "1":
-                var weight = prompt("Please enter your weight(kg):");
-                var height = prompt("Please enter your height(m):");
-                var weight2Int = parseFloat(weight);
-                var height2Int = parseFloat(height);
-                result = weight2Int/Math.pow(height2Int, 2);
+                var weight = parseFloat(prompt("Please enter your weight(kg):"));
+                var height = parseFloat(prompt("Please enter your height(m):"));
+                result = weight/Math.pow(height, 2);
                 break;  
             case "2":
-                var celsiusStr = prompt("Please the tempreture(in celsius) to convert to Farenheit:");
-                var celsius2Int = parseFloat(celsiusStr);
-                result = (celsius2Int*1.8)+32;
+                var celsius = parseFloat(prompt("Please the tempreture(in celsius) to convert to Farenheit:"));
+                result = (celsius*1.8)+32;
                 break;
             case "3":
-                var farenStr = prompt("Please the tempreture(in Farenheit) to convert to celsius:");
-                var faren2Int = parseFloat(farenStr);
-                result = (faren2Int-32)/1.8;
+                var faren = parseFloat(prompt("Please the tempreture(in Farenheit) to convert to celsius:"));
+                result = (faren-32)/1.8;
                 break;
             default:
                 alert("Invalid Option");
                 break;
         }
-        return result;
+        return result.toFixed(2);
 }
 
 // ============= Main Code =============
